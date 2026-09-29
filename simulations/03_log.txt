@@ -1,0 +1,10 @@
+﻿Rscript : Error in checkForRemoteErrors(val) : 
+At line:1 char:497
++ ... Processors -Sum).Sum; Rscript 03_lts_effective_df.R > 03_log.txt 2>&1
++                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Error in checkForRemoteErrors(val) : :String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  5 nodes produced errors; first error: Need more than twice as many observations as variables.
+Calls: parLapplyLB ... clusterApplyLB -> dynamicClusterApply -> checkForRemoteErrors
+Execution halted

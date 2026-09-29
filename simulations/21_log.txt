@@ -1,0 +1,3 @@
+Error in `[.data.frame`(all, meth) : undefined columns selected
+Calls: aggregate -> [ -> [.data.frame
+Execution halted

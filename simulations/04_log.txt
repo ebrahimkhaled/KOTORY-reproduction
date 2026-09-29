@@ -1,0 +1,4 @@
+Error in integrate(g, lo, hi, rel.tol = 1e-10, subdivisions = 2000L) : 
+  the integral is probably divergent
+Calls: lapply -> FUN -> data.frame
+Execution halted

@@ -1,0 +1,101 @@
+"data","n","test","p"
+"Housing, clean",20,"KaH-III",0.0133814691114729
+"Housing, clean",20,"KaH robust (alpha = 0.75)",0.0106093160228575
+"Housing, clean",20,"Goldfeld-Quandt",0.00556395084205738
+"Housing, clean",20,"Breusch-Pagan (Koenker)",0.00733428548286128
+"Housing, clean",20,"White",0.0149531458293134
+"Housing, clean",20,"MGQ (Rana et al. 2008)",0.0106481253661146
+"Housing, clean",20,"KaH robust bootstrap",0.0847983453981386
+"Housing, clean",20,"RGQ (Alih-Ong, as written)",0.00747562360026761
+"Housing, clean",20,"RGQ (ranked by x)",0.00641367384118361
+"Housing, clean",20,"White after LTS screen (BRW)",0.0493342324925725
+"Housing, outliers",20,"KaH-III",0.000627352331756037
+"Housing, outliers",20,"KaH robust (alpha = 0.75)",0.00864251166836849
+"Housing, outliers",20,"Goldfeld-Quandt",0.693668370097627
+"Housing, outliers",20,"Breusch-Pagan (Koenker)",0.557178385274434
+"Housing, outliers",20,"White",0.194964298343571
+"Housing, outliers",20,"MGQ (Rana et al. 2008)",0.000766368595873699
+"Housing, outliers",20,"KaH robust bootstrap",0.183040330920372
+"Housing, outliers",20,"RGQ (Alih-Ong, as written)",NA
+"Housing, outliers",20,"RGQ (ranked by x)",NA
+"Housing, outliers",20,"White after LTS screen (BRW)",0.0463893512704533
+"Consumption, clean",30,"KaH-III",0.143216758642052
+"Consumption, clean",30,"KaH robust (alpha = 0.75)",0.18557759157856
+"Consumption, clean",30,"Goldfeld-Quandt",0.0618446064050402
+"Consumption, clean",30,"Breusch-Pagan (Koenker)",0.0216687760762904
+"Consumption, clean",30,"White",0.06956795714945
+"Consumption, clean",30,"MGQ (Rana et al. 2008)",0.537364061619884
+"Consumption, clean",30,"KaH robust bootstrap",0.33
+"Consumption, clean",30,"RGQ (Alih-Ong, as written)",0.000143919530085103
+"Consumption, clean",30,"RGQ (ranked by x)",0.0391004745540605
+"Consumption, clean",30,"White after LTS screen (BRW)",0.420589400139014
+"Consumption, outliers",30,"KaH-III",0.00482226760588944
+"Consumption, outliers",30,"KaH robust (alpha = 0.75)",0.290704385177516
+"Consumption, outliers",30,"Goldfeld-Quandt",0.677130274836119
+"Consumption, outliers",30,"Breusch-Pagan (Koenker)",0.881328361866496
+"Consumption, outliers",30,"White",0.252681524778112
+"Consumption, outliers",30,"MGQ (Rana et al. 2008)",0.014350735295578
+"Consumption, outliers",30,"KaH robust bootstrap",0.546
+"Consumption, outliers",30,"RGQ (Alih-Ong, as written)",0.000111649562545839
+"Consumption, outliers",30,"RGQ (ranked by x)",0.0423116108382021
+"Consumption, outliers",30,"White after LTS screen (BRW)",0.0411777552664194
+"Savings, clean",31,"KaH-III",0.0298732551970673
+"Savings, clean",31,"KaH robust (alpha = 0.75)",0.0316663849882822
+"Savings, clean",31,"Goldfeld-Quandt",0.0119096477855829
+"Savings, clean",31,"Breusch-Pagan (Koenker)",0.00109194345230788
+"Savings, clean",31,"White",0.00383182028303435
+"Savings, clean",31,"MGQ (Rana et al. 2008)",0.00056269792433629
+"Savings, clean",31,"KaH robust bootstrap",0.047
+"Savings, clean",31,"RGQ (Alih-Ong, as written)",1.80891629886023e-05
+"Savings, clean",31,"RGQ (ranked by x)",0.506866642760753
+"Savings, clean",31,"White after LTS screen (BRW)",0.379321016360437
+"Savings, outliers",31,"KaH-III",0.00241330942434526
+"Savings, outliers",31,"KaH robust (alpha = 0.75)",0.0140902868861018
+"Savings, outliers",31,"Goldfeld-Quandt",0.787006843915976
+"Savings, outliers",31,"Breusch-Pagan (Koenker)",0.356677114692641
+"Savings, outliers",31,"White",0.00159747351572202
+"Savings, outliers",31,"MGQ (Rana et al. 2008)",0.000323051102524207
+"Savings, outliers",31,"KaH robust bootstrap",0.199
+"Savings, outliers",31,"RGQ (Alih-Ong, as written)",7.06144413798806e-05
+"Savings, outliers",31,"RGQ (ranked by x)",0.161887569239046
+"Savings, outliers",31,"White after LTS screen (BRW)",0.0748987601662002
+"Restaurant, clean",30,"KaH-III",0.0878667098987271
+"Restaurant, clean",30,"KaH robust (alpha = 0.75)",0.0239256030270573
+"Restaurant, clean",30,"Goldfeld-Quandt",0.0366350804131421
+"Restaurant, clean",30,"Breusch-Pagan (Koenker)",0.0368468822962561
+"Restaurant, clean",30,"White",0.107512778341712
+"Restaurant, clean",30,"MGQ (Rana et al. 2008)",0.0085375727845295
+"Restaurant, clean",30,"KaH robust bootstrap",0.084
+"Restaurant, clean",30,"RGQ (Alih-Ong, as written)",0.0137189067965826
+"Restaurant, clean",30,"RGQ (ranked by x)",0.00363453613605493
+"Restaurant, clean",30,"White after LTS screen (BRW)",0.0409467173465902
+"Restaurant, outliers",30,"KaH-III",0
+"Restaurant, outliers",30,"KaH robust (alpha = 0.75)",0.00400446896116813
+"Restaurant, outliers",30,"Goldfeld-Quandt",0.0251013499935581
+"Restaurant, outliers",30,"Breusch-Pagan (Koenker)",0.0703570571630249
+"Restaurant, outliers",30,"White",0.0232684562133362
+"Restaurant, outliers",30,"MGQ (Rana et al. 2008)",0.00150425414432327
+"Restaurant, outliers",30,"KaH robust bootstrap",0.267
+"Restaurant, outliers",30,"RGQ (Alih-Ong, as written)",0.0872779381897862
+"Restaurant, outliers",30,"RGQ (ranked by x)",0.0010146015977418
+"Restaurant, outliers",30,"White after LTS screen (BRW)",0.0500746984797601
+"Education (Alaska kept)",50,"KaH-III",0.962884775258169
+"Education (Alaska kept)",50,"KaH robust (alpha = 0.75)",0.0753132260095234
+"Education (Alaska kept)",50,"Goldfeld-Quandt",0.842082550968589
+"Education (Alaska kept)",50,"Breusch-Pagan (Koenker)",0.00137628255533848
+"Education (Alaska kept)",50,"White",0.00696145535661428
+"Education (Alaska kept)",50,"MGQ (Rana et al. 2008)",0.688729918357094
+"Education (Alaska kept)",50,"KaH robust bootstrap",0.193
+"Education (Alaska kept)",50,"RGQ (Alih-Ong, as written)",0.00591820072272359
+"Education (Alaska kept)",50,"RGQ (ranked by x)",0.21743566341771
+"Education (Alaska kept)",50,"White after LTS screen (BRW)",0.466542465978109
+"Education (Alaska removed)",49,"KaH-III",0.833013549419769
+"Education (Alaska removed)",49,"KaH robust (alpha = 0.75)",0.110511580671763
+"Education (Alaska removed)",49,"Goldfeld-Quandt",0.565826758713525
+"Education (Alaska removed)",49,"Breusch-Pagan (Koenker)",0.00129220519708613
+"Education (Alaska removed)",49,"White",0.0109470517487461
+"Education (Alaska removed)",49,"MGQ (Rana et al. 2008)",0.442967879551303
+"Education (Alaska removed)",49,"KaH robust bootstrap",0.262
+"Education (Alaska removed)",49,"RGQ (Alih-Ong, as written)",3.73824108615568e-05
+"Education (Alaska removed)",49,"RGQ (ranked by x)",0.336121186577754
+"Education (Alaska removed)",49,"White after LTS screen (BRW)",0.457071130541733
