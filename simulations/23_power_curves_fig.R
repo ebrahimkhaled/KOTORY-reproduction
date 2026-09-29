@@ -1,4 +1,4 @@
-# Step 23: power-curve figure (Fig4) from step 21. Rejection rate against the strength gamma of
+# Step 23: power-curve figure (Fig7) from step 21. Rejection rate against the strength gamma of
 # heteroscedasticity; the gamma = 0 column is the size. KaH-robust is the highlighted series.
 a <- read.csv("power_curves.csv")
 out <- "../paper_stat_papers/figures"
@@ -13,7 +13,7 @@ ser <- list(
   White     = list(lab = "White",                 col = "#009E73", lty = 2, lwd = 1.4, pch = 4,  cex = 0.75))
 draw_order <- c("WK", "White", "BP", "WhiteLTS", "MGQ", "GQ", "KaH3", "KaHrobust")
 
-cairo_pdf(file.path(out, "Fig6.pdf"), width = 5.16, height = 5.0, family = "Arial", pointsize = 8.5)
+cairo_pdf(file.path(out, "Fig7.pdf"), width = 5.16, height = 5.0, family = "Arial", pointsize = 8.5)
 layout(rbind(1:2, 3:4, c(5, 5)), heights = c(1, 1, 0.34))
 par(mgp = c(1.9, 0.5, 0), tcl = -0.25, las = 1)
 for (n in c(60, 150)) for (cont in c(FALSE, TRUE)) {
@@ -44,4 +44,4 @@ legend("center", ncol = 4, bty = "n", cex = 0.95,
        legend = sapply(ser, `[[`, "lab"), col = sapply(ser, `[[`, "col"), lty = sapply(ser, `[[`, "lty"),
        lwd = sapply(ser, `[[`, "lwd"), pch = sapply(ser, `[[`, "pch"), seg.len = 2.4)
 dev.off()
-cat("Fig6.pdf (power curves) written\n")
+cat("Fig7.pdf (power curves) written\n")

@@ -36,9 +36,10 @@ Every simulation stores the p-value of every test in every replication, so each 
 | Fig. 2: null distributions | `04_validate_robust.R`, `07_figures.R` (`robust_full/`) | `16_paper_figures.R` |
 | Fig. 3: size of all tests | `08_alpha_check.R`, `11_all_tests.R` (`all_tests/`) | `22_size_heatmap.R` |
 | Figs. 4 and 5: factorial comparison | `28_factorial.R` (`factorial/`) | `29_factorial_summary.R`, `30_factorial_fig.R`, `31_scenario_grid.R`, `32_winning_cells.R` |
+| Fig. 6: the usage rule against the best other test in each setting | `28_factorial.R` | `36_rule_vs_best_fig.R` |
 | Table 2: heavy-tailed errors | `33_heavy_tails.R` (`heavy_tails/`) | `34_heavy_tails_summary.R` |
 | Table 3: power | `11_all_tests.R` | `17_paper_tables.R` |
-| Fig. 6: power curves | `21_power_curves.R` (`power_curves/`) | `23_power_curves_fig.R` |
+| Fig. 7: power curves | `21_power_curves.R` (`power_curves/`) | `23_power_curves_fig.R` |
 | Table 4: size-adjusted power | `11_all_tests.R` | `20_size_adjusted_power.R`, `17_paper_tables.R` |
 | Table 5: the robust Goldfeld–Quandt test | `rgq_alih_ong.R`, `13_rgq.R` (`rgq/`) | `17_paper_tables.R` |
 | Table 6: benchmark data sets | `15_real_data.R` | `17_paper_tables.R` |
