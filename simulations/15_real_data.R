@@ -2,7 +2,7 @@
 # outliers planted by the authors of the competing tests (their own home ground), plus one
 # data set with a genuine (not planted) outlier.
 #   housing     Pindyck & Rubinfeld; Rana, Midi & Imon (2008) planted y1 = 4.9, y20 = 2.0
-#   consumption Gujarati; thesis / Rana et al. planted cases 1, 2, 30
+#   consumption Gujarati; Alih & Ong (2015) Table 7, planted cases 1, 2, 30 (Rana et al. 2008 use other values)
 #   savings     Koutsoyiannis; Alih & Ong (2015) Table 1, planted cases 1, 2, 30, 31
 #   restaurant  Montgomery et al.; Alih & Ong (2015) Table 3, planted cases 1, 26, 30
 #   education   robustbase::education (Chatterjee & Price), 50 US states, 3 regressors, Alaska
