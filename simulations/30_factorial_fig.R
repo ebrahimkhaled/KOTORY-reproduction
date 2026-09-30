@@ -21,9 +21,10 @@ par(mar = c(3.2, 9.4, 1.4, 0.6), las = 1, mgp = c(1.9, 0.5, 0), tcl = -0.25)
 cols <- ifelse(names(avg) == "KaHrobust", "#D55E00", ifelse(names(avg) == "KaH3", "#0072B2", "grey70"))
 # the Wilcox-Keselman mean covers the p = 1 settings only, so its bar is hatched, not solid
 b <- barplot(100 * avg, horiz = TRUE, names.arg = lab[names(avg)], col = cols, border = NA, xlim = c(0, 100),
-             xlab = "Power (%)", cex.names = 0.95, axes = FALSE,
+             xlab = "", cex.names = 0.95, axes = FALSE,
              density = ifelse(names(avg) == "WK", 25, NA))
 axis(1, at = c(0, 50, 100))
+mtext("Size-adjusted power (%)", side = 1, line = 1.9, adj = 1)   # right-aligned so the full label fits
 text(100 * avg + 1.5, b, sprintf("%.0f", 100 * avg), adj = 0, cex = 0.95,
      font = ifelse(names(avg) == "KaHrobust", 2, 1))
 mtext("(a)", side = 3, line = 0.2, adj = -0.55, font = 2)

@@ -49,7 +49,7 @@ print(round(sz[, c("KaHrobust", "KaHrobustBoot", "KaH3"), drop = FALSE], 1))
 saveRDS(list(size = sz, adj = adj, summary = out), "heavy_tails_summary.rds")
 
 # LaTeX table (booktabs; narrowed with font size and tabcolsep, never resizebox)
-f1 <- function(x) ifelse(is.na(x), "--", sprintf("%.0f", x))
+f1 <- function(x) ifelse(is.na(x), "--", sprintf("%.0f", floor(x + 0.5)))   # round half up (sprintf rounds 52.5 to 52)
 rows <- sprintf("%s & %s--%s & %s & %s & %s & %s & %s & %d \\\\", out$test, f1(out$size_min), f1(out$size_max),
                 f1(out$size_mean), f1(out$adj_mean), f1(out$mono), f1(out$U), f1(out$bulge), out$wins)
 bt <- sz[, "KaHrobustBoot"]
