@@ -1,11 +1,13 @@
 # Step 20: size-adjusted power under contamination. For each test and (n, p), the rejection
 # threshold is the 5% quantile of its p-values under H0 with 10% outliers (so its size under
 # contamination is exactly 5%); power is then the rate below that threshold under H1 with 10%
-# outliers. Uses the per-replication p-values stored by step 11 (same data for every test).
-files <- list.files("all_tests", "_ch\\d+\\.rds$", full.names = TRUE)
+# outliers. Uses the per-replication p-values stored by step 11b (step 11 plus BAMSET from its
+# definition; same data for every test).
+files <- list.files("all_tests_v2", "_ch\\d+\\.rds$", full.names = TRUE)
 all <- do.call(rbind, lapply(files, readRDS))
+all$BAMSET_3 <- all$BAMSET_own
 tests <- c("KaH3", "V2_a75", "V2_a75_bs", "V2_a90", "GQ", "BP_Koenker", "White", "MGQ_Rana2008",
-           "BRW_White", "WK_2006", "Zhou_2015", "EvansKing", "HMC", "BF_3parts")
+           "BRW_White", "WK_2006", "Zhou_2015", "EvansKing", "HMC", "BF_3parts", "BAMSET_3")
 cells <- unique(all[c("n", "p")])
 res <- do.call(rbind, lapply(seq_len(nrow(cells)), function(k) {
   n <- cells$n[k]; p <- cells$p[k]

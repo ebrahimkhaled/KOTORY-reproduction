@@ -17,23 +17,25 @@ col_of <- function(v) {                          # diverging palette around 5%
   pal <- c("#2166AC", "#92C5DE", "#F7F7F7", "#FDDBC7", "#F4A582", "#E08050", "#D6604D", "#B2182B", "#67001F")
   pal[findInterval(v, br, left.open = TRUE)]
 }
-cairo_pdf(file.path(out, "Fig3.pdf"), width = 5.16, height = 4.3, family = "Arial", pointsize = 8)
-par(mar = c(2.2, 10.2, 2.6, 0.4), las = 1, xpd = NA)
+cairo_pdf(file.path(out, "Fig3.pdf"), width = 5.16, height = 4.9, family = "Arial", pointsize = 8.5)
+par(mar = c(2.4, 11.2, 2.8, 0.4), las = 1, xpd = NA)
 nr <- nrow(M); nc <- ncol(M)
 plot(NA, xlim = c(0, nc), ylim = c(0, nr), axes = FALSE, xlab = "", ylab = "")
 for (i in 1:nr) for (j in 1:nc) {
   v <- M[i, j]
   rect(j - 1, nr - i, j, nr - i + 1, col = col_of(v), border = "white", lwd = 0.8)
-  text(j - 0.5, nr - i + 0.5, formatC(v, format = "f", digits = 1), cex = 0.78,
+  # a cue that survives greyscale: bold above 7.5%, italic below 2.5%
+  text(j - 0.5, nr - i + 0.5, formatC(v, format = "f", digits = 1), cex = 0.95,
+       font = if (v > 7.5) 2 else if (v < 2.5) 3 else 1,
        col = if (v > 15 || v < 2) "white" else "grey10")
 }
-axis(2, at = nr:1 - 0.5, labels = tests, tick = FALSE, line = -0.6, cex.axis = 0.95,
+axis(2, at = nr:1 - 0.5, labels = tests, tick = FALSE, line = -0.6, cex.axis = 1,
      font = 1)
-axis(1, at = 1:nc - 0.5, labels = rep(clab, 3), tick = FALSE, line = -0.9, cex.axis = 0.85)
-mtext("n (* p = 2)", side = 1, line = 1.1, cex = 0.8, adj = 0)
+axis(1, at = 1:nc - 0.5, labels = rep(clab, 3), tick = FALSE, line = -0.9, cex.axis = 0.95)
+mtext("n (* p = 2)", side = 1, line = 1.1, cex = 0.95, adj = 0)
 for (k in 1:3) {
   segments(4 * (k - 1) + 0.1, nr + 0.35, 4 * k - 0.1, nr + 0.35, lwd = 0.8)
-  text(4 * (k - 1) + 2, nr + 0.8, scen[[k]], cex = 0.95)
+  text(4 * (k - 1) + 2, nr + 0.8, scen[[k]], cex = 1)
 }
 abline(v = c(4, 8), col = "grey20", lwd = 1.2, xpd = FALSE)
 rect(0, nr - 2, nc, nr, border = "grey10", lwd = 1.4, xpd = FALSE)   # frame the proposed tests

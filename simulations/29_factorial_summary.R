@@ -24,6 +24,19 @@ res <- do.call(rbind, lapply(seq_len(nrow(cellsH1)), function(i) {
   }
   out
 }))
+# KaH-III: its stored p-values underflow to 0 in some contaminated null samples, so size-adjust it on
+# the statistic itself (step 38): reject when T1 is at least the ceiling(0.05 N)-th largest null value
+t1 <- readRDS("factorial_kah3_T1.rds")
+t1key <- function(d) paste(d$shape, d$order, d$p, d$cont, d$n, round(d$fingerprint, 6))
+all$KaH3T <- t1$T1[match(t1key(all), t1key(t1))]
+stopifnot(!anyNA(all$KaH3T))
+h0T <- all[all$shape == "none", ]; h1T <- all[all$shape != "none", ]
+for (i in seq_len(nrow(res))) {
+  c0 <- res[i, ]
+  T0 <- h0T$KaH3T[key(h0T) == key(c0)]
+  T1 <- h1T$KaH3T[h1T$shape == c0$shape & key(h1T) == key(c0)]
+  res$KaH3.adj[i] <- mean(T1 >= sort(T0, decreasing = TRUE)[ceiling(0.05 * length(T0))])
+}
 adj <- res[paste0(tests, ".adj")]; names(adj) <- tests
 nom <- res[paste0(tests, ".nom")]; names(nom) <- tests
 cat("\nSIZE (%), range over the 24 H0 cells:\n")

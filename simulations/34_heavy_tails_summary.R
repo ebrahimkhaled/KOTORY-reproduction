@@ -24,6 +24,16 @@ adj <- t(sapply(seq_len(nrow(cells)), function(i) {
   sapply(tests, function(t) { if (all(is.na(h[[t]]))) return(NA)
     thr <- quantile(n0[[t]], .05, na.rm = TRUE, type = 1); 100 * mean(h[[t]] <= thr, na.rm = TRUE) })
 }))
+# KaH-III: size-adjust on the statistic (step 38), because its p-values underflow under heavy tails
+t1 <- readRDS("heavy_kah3_T1.rds")
+t1key <- function(d) paste(d$shape, d$order, d$p, d$n, round(d$fingerprint, 6))
+a$KaH3T <- t1$T1[match(t1key(a), t1key(t1))]
+stopifnot(!anyNA(a$KaH3T))
+null$KaH3T <- a$KaH3T[a$shape == "none"]; alt$KaH3T <- a$KaH3T[a$shape != "none"]
+adj[, "KaH3"] <- sapply(seq_len(nrow(cells)), function(i) {
+  c0 <- cells[i, ]; T0 <- null$KaH3T[key(null) == key(c0)]
+  T1 <- alt$KaH3T[alt$shape == c0$shape & key(alt) == key(c0)]
+  100 * mean(T1 >= sort(T0, decreasing = TRUE)[ceiling(0.05 * length(T0))]) })
 adj <- cbind(cells, adj)
 mean_adj <- colMeans(adj[, tests, drop = FALSE], na.rm = TRUE)
 by_shape <- sapply(tests, function(t) tapply(adj[[t]], adj$shape, mean, na.rm = TRUE))

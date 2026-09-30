@@ -19,8 +19,9 @@ panels <- list(
   list(shape = "mono",  order = "x1",   p = 4, title = "Monotone along x1, p = 4"))
 sdfun <- function(shape, z) switch(shape, mono = exp(0.35 * z), U = 1 + z^2, bulge = 1 + 3 * exp(-z^2))
 n <- 90; m <- n / 3
-cairo_pdf(file.path(out, "Fig4.pdf"), width = 5.16, height = 3.9, family = "Arial", pointsize = 7.5)
-par(mfrow = c(2, 4), mar = c(2.2, 1.9, 3.7, 0.4), mgp = c(1.1, 0.3, 0), tcl = -0.2, las = 1)
+cairo_pdf(file.path(out, "Fig4.pdf"), width = 5.16, height = 7.4, family = "Arial", pointsize = 9)
+par(mfrow = c(4, 2), mar = c(2.4, 2.4, 3.9, 0.6), mgp = c(1.3, 0.4, 0), tcl = -0.2, las = 1,
+    cex = 1)                                    # mfrow with 4 rows shrinks text to 66%; undo it
 for (j in seq_along(panels)) {
   pd <- panels[[j]]
   k <- res$shape == pd$shape & res$order == pd$order & res$p == pd$p & res$cont & res$n == n
@@ -43,9 +44,9 @@ for (j in seq_along(panels)) {
   points(z[oi], ec[oi], pch = 16, cex = 0.5, col = "#D55E00")
   points(z[oi], ec[oi], pch = 1, cex = 1.6, lwd = 1.2, col = "#D55E00")
   box()
-  mtext(pd$title, side = 3, line = 2.3, font = 2, cex = 0.9)
-  mtext(sprintf("KaH-robust %.0f%%", ours), side = 3, line = 1.15, cex = 0.82, col = "#D55E00", font = 2)
-  mtext(sprintf("best rival %.0f%% (%s)", 100 * max(rv), rlab[best]), side = 3, line = 0.2, cex = 0.72, col = "grey25")
+  mtext(pd$title, side = 3, line = 2.3, font = 2, cex = 1)
+  mtext(sprintf("KaH-robust %.0f%%", ours), side = 3, line = 1.15, cex = 0.95, col = "#D55E00", font = 2)
+  mtext(sprintf("best rival %.0f%% (%s)", 100 * max(rv), rlab[best]), side = 3, line = 0.2, cex = 0.9, col = "grey25")
 }
 dev.off()
 cat("Fig4.pdf (winning-settings grid) written\n")
