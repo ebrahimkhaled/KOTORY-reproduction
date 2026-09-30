@@ -73,7 +73,7 @@ rows <- sapply(seq_along(keep), function(i) {
   paste0(labs[i], " & ", paste(v, collapse = " & "), " \\\\")
 })
 writeLines(c("\\begin{table}[!htbp]", "\\centering",
-  "\\caption{$p$-values on four benchmark data sets, without and with the outliers planted by the authors of the competing robust tests ($n=20$, 31, 30 and 30). A dash marks a test that could not be computed: in the housing data with outliers a matrix in the outlier screen of RGQ is singular, because the regressor takes few distinct values}\\label{tab:real}",
+  "\\caption{$p$-values on four benchmark data sets, without and with the outliers planted by the authors of the competing robust tests ($n=20$, 31, 30 and 30). The bootstrap reference used $B=999$. A dash marks a test that could not be computed: in the housing data with outliers a matrix in the outlier screen of RGQ is singular, because the regressor takes few distinct values}\\label{tab:real}",
   "\\scriptsize", "\\setlength{\\tabcolsep}{2.5pt}", "\\begin{tabular}{lcccccccc}", "\\toprule",
   "& \\multicolumn{2}{c}{Housing} & \\multicolumn{2}{c}{Savings} & \\multicolumn{2}{c}{Restaurant} & \\multicolumn{2}{c}{Consumption} \\\\",
   "\\cmidrule(lr){2-3}\\cmidrule(lr){4-5}\\cmidrule(lr){6-7}\\cmidrule(lr){8-9}",

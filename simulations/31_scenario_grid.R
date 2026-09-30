@@ -19,7 +19,7 @@ panels <- list(
   list(shape = "mono",  order = "x1",   p = 4, title = "Monotone along x1, p = 4"))
 sdfun <- function(shape, z) switch(shape, mono = exp(0.35 * z), U = 1 + z^2, bulge = 1 + 3 * exp(-z^2))
 n <- 90; m <- n / 3
-cairo_pdf(file.path(out, "Fig4.pdf"), width = 5.16, height = 7.4, family = "Arial", pointsize = 9)
+cairo_pdf(file.path(out, "Fig4.pdf"), width = 5.16, height = 6.7, family = "Arial", pointsize = 9)
 par(mfrow = c(4, 2), mar = c(2.4, 2.4, 3.9, 0.6), mgp = c(1.3, 0.4, 0), tcl = -0.2, las = 1,
     cex = 1)                                    # mfrow with 4 rows shrinks text to 66%; undo it
 for (j in seq_along(panels)) {

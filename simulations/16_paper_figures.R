@@ -61,7 +61,7 @@ for (k in 1:3) {
 legend("top", bty = "n", cex = 0.9, col = cols, pch = pchs, lwd = 1.2, horiz = TRUE,
        legend = c(expression(alpha == 0.50), expression(alpha == 0.75), expression(alpha == 0.90)))
 legend("bottomleft", bty = "n", cex = 0.85, lty = c(1, 2), col = "grey30",
-       legend = c("simulated (mean over p = 1,...,5)", expression("limit " * r(alpha))))
+       legend = c("simulated (mean over feasible p ≤ 5)", expression("limit " * r(alpha))))
 dev.off()
 
 cat("figures written to", normalizePath(out), "\n")
