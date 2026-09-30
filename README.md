@@ -38,11 +38,12 @@ Every simulation stores the p-value of every test in every replication, so each 
 | Figs. 4 and 5: factorial comparison | `28_factorial.R` (`factorial/`); KaH-III statistic `38_kah3_statistic.R` | `29_factorial_summary.R`, `30_factorial_fig.R`, `31_scenario_grid.R`, `32_winning_cells.R` |
 | Fig. 6: the usage rule against the best other test in each setting | `28_factorial.R` | `36_rule_vs_best_fig.R` |
 | Table 2: heavy-tailed errors | `33_heavy_tails.R` (`heavy_tails/`); KaH-III statistic `38_kah3_statistic.R` | `34_heavy_tails_summary.R` |
-| Table 3: power | `11_all_tests.R`, `11b_all_tests_bamset.R` | `11c_compare_and_merge.R`, `17_paper_tables.R` |
+| Sect. 3.6 and its table: concentrated and asymmetric contamination (masking) | `39_masking.R` (`masking/`); the contiguous-block results quoted in the text are from `26_shapes_alpha50.R` (`shapes_alpha50.csv`) | `40_masking_summary.R` |
+| Table of power at one strength of heteroscedasticity | `11_all_tests.R`, `11b_all_tests_bamset.R` | `11c_compare_and_merge.R`, `17_paper_tables.R` |
 | Fig. 7: power curves | `21_power_curves.R` (`power_curves/`) | `23_power_curves_fig.R` |
-| Table 4: size-adjusted power | `11b_all_tests_bamset.R` | `20_size_adjusted_power.R`, `17_paper_tables.R` |
-| Table 5: the robust Goldfeld–Quandt test | `rgq_alih_ong.R`, `13_rgq.R` (`rgq/`) | `17_paper_tables.R` |
-| Table 6: benchmark data sets | `15_real_data.R` | `17_paper_tables.R` |
+| Table of size-adjusted power under outliers | `11b_all_tests_bamset.R` | `20_size_adjusted_power.R`, `17_paper_tables.R` |
+| Table of the robust Goldfeld–Quandt test | `rgq_alih_ong.R`, `13_rgq.R` (`rgq/`) | `17_paper_tables.R` |
+| Table of the benchmark data sets (and the education data, Sect. 4) | `15_real_data.R` | `17_paper_tables.R` |
 | Section 4, the wages example (SLID data from `carData`) | `35_wages_example.R` | printed |
 | BAMSET computed from its definition (Appendix) | `18_bamset_check.R`, `18b_bamset_own.R`; on the same data sets as every other test in `11b_all_tests_bamset.R` (the separate-data run `19_bamset_rerun.R` is superseded, its rates kept in `all_tests_rejection_step19.csv`) | |
 

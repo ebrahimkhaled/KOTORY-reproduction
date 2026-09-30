@@ -23,7 +23,7 @@ for (n in c(60, 150)) for (cont in c(FALSE, TRUE)) {
        ylab = if (!cont) "Rejection rate (%)" else "", yaxt = "n")
   axis(2, at = seq(0, 1, 0.25), labels = if (!cont) c("0", "25", "50", "75", "100") else FALSE)
   rect(-0.03, -0.05, 0.03, 1.05, col = "grey93", border = NA)
-  text(0, 1.0, "size", cex = 0.95, col = "grey40")
+  text(0.035, 0.96, "size", cex = 0.95, col = "grey40", adj = 0)   # inside the panel, clear of the frame
   abline(h = 0.05, lty = 2, col = "grey55")
   abline(h = seq(0.25, 1, 0.25), col = "grey92", lwd = 0.6)
   for (s in draw_order) {
